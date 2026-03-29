@@ -68,7 +68,7 @@ const NavBar = () => {
         </div>
         <div className="navbar-end">
           <div className="flex items-center gap-4">
-            <i class="fa-solid fa-cart-shopping cursor-pointer hover:text-red-400 transition-all"></i>
+            <i className="fa-solid fa-cart-shopping cursor-pointer hover:text-red-400 transition-all"></i>
             <button className="font-semibold cursor-pointer hover:text-green-500 transition-all">
               Login
             </button>

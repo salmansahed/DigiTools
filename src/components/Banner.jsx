@@ -27,7 +27,7 @@ const Banner = () => {
             Explore Products
           </button>
           <button className="btn rounded-full border-[#8a20f9] text-[#8a20f9]">
-            <i class="fa-solid fa-play"></i>
+            <i className="fa-solid fa-play"></i>
             Watch Demo
           </button>
         </div>
