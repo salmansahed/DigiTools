@@ -5,7 +5,6 @@ import Banner from './components/Banner'
 import Achievements from './components/Achievements'
 import HowItWorks from './components/HowItWorks'
 
-
 function App() {
 
   return (
