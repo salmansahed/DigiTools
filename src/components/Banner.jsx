@@ -4,7 +4,7 @@ import icon1 from "../assets/images/icon-1.png";
 
 const Banner = () => {
   return (
-    <div className="flex flex-col gap-8 md:gap-0 md:flex-row items-center justify-between container mx-auto py-10 md:py-16 px-4">
+    <div className="flex flex-col gap-8 md:gap-0 md:flex-row items-center justify-between container mx-auto my-10 md:my-16 px-4">
       <div className="space-y-2 text-center md:text-left">
         <div className="inline-block">
           <p className="bg-[#e1e7ff] flex items-center gap-2 px-4 py-1 rounded-full">
