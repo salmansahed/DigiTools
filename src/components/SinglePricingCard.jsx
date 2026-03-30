@@ -3,7 +3,7 @@ import React from "react";
 const SinglePricingCard = ({ pricingCard }) => {
   return (
     <div
-      className={`flex flex-col ${pricingCard.isPopular ? "bg-linear-to-r from-[#4F39F6] to-[#9514FA] relative" : "bg-[#f9fafc]"} rounded-lg p-6 mt-10 shadow border-2 border-[#F2F2F2]`}
+      className={`flex flex-col ${pricingCard.isPopular ? "bg-linear-to-r from-[#4F39F6] to-[#9514FA] relative" : "bg-[#f9fafc]"} rounded-lg p-6 shadow border-2 border-[#F2F2F2]`}
     >
       <h2
         className={`text-2xl font-bold ${pricingCard.isPopular ? "text-white" : "text-black"}`}

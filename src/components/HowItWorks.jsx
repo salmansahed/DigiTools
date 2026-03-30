@@ -5,7 +5,7 @@ import rocket from "../assets/images/rocketIcon.png"
 
 const HowItWorks = () => {
   return (
-    <div className="bg-[#f9fafc] py-28">
+    <div className="bg-[#f9fafc] py-16 md:py-20 lg:py-28">
       <div className="max-w-285 mx-auto px-4">
         <div className="text-center space-y-4">
           <h1 className="text-3xl md:text-4xl xl:text-5xl font-black">
