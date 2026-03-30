@@ -26,8 +26,8 @@ const SinglePricingCard = ({ pricingCard }) => {
         {pricingCard.billing}
       </h1>
       <div className="mb-6">
-        {pricingCard.features.map((feature) => (
-          <li
+        {pricingCard.features.map((feature, index) => (
+          <li key={index}
             className={`list-none mb-2 ${pricingCard.isPopular ? "text-white" : "text-black"}`}
           >
             <i

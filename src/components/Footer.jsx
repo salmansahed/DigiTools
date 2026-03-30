@@ -47,17 +47,17 @@ const Footer = () => {
             <ul className="flex gap-4 mt-5 items-center justify-center md:justify-start">
               <li className="bg-white hover:bg-blue-500 text-black hover:text-white transition-all rounded-full w-10 h-10 flex items-center justify-center">
                 <a href="#">
-                  <i class="fa-brands fa-instagram"></i>
+                  <i className="fa-brands fa-instagram"></i>
                 </a>
               </li>
               <li className="bg-white hover:bg-blue-500 text-black hover:text-white transition-all rounded-full w-10 h-10 flex items-center justify-center">
                 <a href="#">
-                  <i class="fa-brands fa-facebook"></i>
+                  <i className="fa-brands fa-facebook"></i>
                 </a>
               </li>
               <li className="bg-white hover:bg-blue-500 text-black hover:text-white transition-all rounded-full w-10 h-10 flex items-center justify-center">
                 <a href="#">
-                  <i class="fa-brands fa-x-twitter"></i>
+                  <i className="fa-brands fa-x-twitter"></i>
                 </a>
               </li>
             </ul>

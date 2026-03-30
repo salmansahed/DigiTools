@@ -8,7 +8,11 @@ const Banner = () => {
       <div className="space-y-2 text-center md:text-left">
         <div className="inline-block">
           <p className="bg-[#e1e7ff] flex items-center gap-2 px-4 py-1 rounded-full">
-            <img src={icon1} alt="" />
+            <img
+              className="animate-pulse"
+              src={icon1}
+              alt=""
+            />
             <span className="bg-linear-to-r from-[#4F39F6] to-[#9514FA] bg-clip-text text-transparent font-medium">
               New: AI-Powered Tools Available
             </span>

@@ -1,33 +1,40 @@
-import { ToastContainer } from 'react-toastify'
-import './App.css'
-import NavBar from './components/NavBar'
-import Banner from './components/Banner'
-import Achievements from './components/Achievements'
-import HowItWorks from './components/HowItWorks'
-import Pricing from './components/Pricing'
-import CTA from './components/CTA'
-import Footer from './components/Footer'
+import { ToastContainer } from "react-toastify";
+import "./App.css";
+import NavBar from "./components/NavBar";
+import Banner from "./components/Banner";
+import Achievements from "./components/Achievements";
+import HowItWorks from "./components/HowItWorks";
+import Pricing from "./components/Pricing";
+import CTA from "./components/CTA";
+import Footer from "./components/Footer";
+import Products from "./components/Products";
 
-const pricingData = async() => {
+const pricingData = async () => {
   const res = await fetch("PricingData.json");
-  return res.json()
-}
+  return res.json();
+};
 const pricingPromise = pricingData();
 
-function App() {
+const productsData = async () => {
+  const res = await fetch("Products.json");
+  return res.json();
+};
+const productsPromise = productsData();
 
+function App() {
   return (
     <>
       <ToastContainer />
       <NavBar />
       <Banner />
       <Achievements />
+      <Products productsPromise={productsPromise} />
       <HowItWorks />
       <Pricing pricingPromise={pricingPromise} />
-      <CTA/>
-      <Footer/>
+      <CTA />
+      <Footer />
     </>
   );
 }
 
-export default App
+export default App;
