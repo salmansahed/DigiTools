@@ -1,10 +1,18 @@
 import React, { useState } from "react";
+import { toast } from "react-toastify";
 
-const Product = ({ product }) => {
+const Product = ({ product, setCartItem, cartItem }) => {
   const [productBtn, setProductBtn] = useState("Buy Now");
   const handleProductBtn = () => {
-    setProductBtn("Added to Cart")
-  }
+    const isExist = cartItem.find((item) => item.id === product.id);
+      if(isExist){
+          return toast.error("Already added!");
+        }else{
+        setProductBtn("Added to Cart");
+        setCartItem([...cartItem, product]);
+        toast.success("Added to Cart");
+    }
+  };
 
   return (
     <div className="border-2 border-black/30 p-6 rounded-lg space-y-4 flex flex-col">
@@ -18,13 +26,16 @@ const Product = ({ product }) => {
         {product.billing}
       </h2>
       <div className="space-y-2">
-        {product.features.map((feature) => (
-          <li className="list-none text-[#627382]">
-            <i class="fa-solid fa-check text-green-500"></i> {feature}
+        {product.features.map((feature, index) => (
+          <li key={index} className="list-none text-[#627382]">
+            <i className="fa-solid fa-check text-green-500"></i> {feature}
           </li>
         ))}
       </div>
-      <button onClick={handleProductBtn} className="btn bg-linear-to-r from-[#4F39F6] to-[#9514FA] w-full rounded-full text-white mt-auto">
+      <button
+        onClick={handleProductBtn}
+        className="btn bg-linear-to-r from-[#4F39F6] to-[#9514FA] w-full rounded-full text-white mt-auto border-none"
+      >
         {productBtn}
       </button>
     </div>

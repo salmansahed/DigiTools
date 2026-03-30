@@ -2,9 +2,9 @@ import React, { use, useState } from "react";
 import Product from "./Product";
 import Cart from "./Cart";
 
-const Products = ({ productsPromise }) => {
+const Products = ({ productsPromise, cartItem, setCartItem }) => {
+  console.log(cartItem);
   const products = use(productsPromise);
-  console.log(products);
   const [btnToggle, setBtnToggle] = useState("Products");
   const handleProductsBtn = () => {
     setBtnToggle("Products");
@@ -37,19 +37,23 @@ const Products = ({ productsPromise }) => {
             onClick={handleCartBtn}
             className={`btn rounded-full ${btnToggle === "Cart" ? "bg-linear-to-r from-[#4F39F6] to-[#9514FA] text-white" : "bg-transparent"} border-none`}
           >
-            Cart
+            Cart ({cartItem.length})
           </button>
         </div>
       </div>
 
       <div className="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
         {btnToggle === "Products" &&
-          products.map((product) => <Product product={product} />)}
-
-        {btnToggle === "Cart" && (
-            <Cart/>
-        )}
+          products.map((product) => (
+            <Product
+              key={product.id}
+              cartItem={cartItem}
+              setCartItem={setCartItem}
+              product={product}
+            />
+          ))}
       </div>
+      <div>{btnToggle === "Cart" && <Cart setCartItem={setCartItem} cartItem={cartItem} />}</div>
     </div>
   );
 };

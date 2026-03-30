@@ -1,11 +1,73 @@
-import React from 'react';
+import React from "react";
+import { toast } from "react-toastify";
 
-const Cart = () => {
-    return (
-        <div>
-            Cart
+const Cart = ({ cartItem, setCartItem }) => {
+  const totalPrice = cartItem.reduce(
+    (total, product) => total + product.price,
+    0,
+  );
+
+  const handleRemoveBtn = (id) => {
+    const remainingItems = cartItem.filter((item) => item.id !== id);
+    setCartItem(remainingItems);
+    toast.warn("Item removed from cart");
+  };
+
+  const handleCheckoutBtn = () => {
+    setCartItem([]);
+    toast("All Products Checkout");
+  };
+  return (
+    <div className="bg-white shadow p-6 rounded-lg border-2 border-black/10">
+      <h2 className="text-2xl font-bold mb-6">Your Cart</h2>
+      {cartItem.map((product) => (
+        <div className="flex items-center justify-between bg-[#f9fafc] shadow rounded-lg p-6 mb-6">
+          <div className="flex items-center gap-6 w-full">
+            <img className="w-[18%] sm:w-[10%] md:w-[5%]" src={product.icon} alt="" />
+            <div>
+              <h3 className="text-[18px] md:text-xl font-bold">{product.title}</h3>
+              <p className="text-[#627382] font-medium">${product.price}</p>
+            </div>
+          </div>
+
+          <div>
+            <p
+              onClick={() => handleRemoveBtn(product.id)}
+              className="text-[#FF3980] cursor-pointer hover:text-purple-500 transition-all"
+            >
+              Remove
+            </p>
+          </div>
         </div>
-    );
+      ))}
+      <div
+        className={`flex justify-between ${totalPrice === 0 ? "hidden" : "block"}`}
+      >
+        <p>Total:</p>
+        <h3 className="text-xl font-semibold">${totalPrice}</h3>
+      </div>
+      <button
+        onClick={handleCheckoutBtn}
+        className={`btn rounded-full w-full bg-linear-to-r from-[#4F39F6] to-[#9514FA] text-white border-none ${totalPrice === 0 ? "hidden" : "block"} mt-6`}
+      >
+        Proceed to Checkout
+      </button>
+
+      <div
+        className={`text-center space-y-3 md:space-y-5 py-14 md:py-20 ${cartItem.length === 0 ? "block" : "hidden"}`}
+      >
+        <img
+          className="mx-auto"
+          src={
+            "https://img.icons8.com/?size=100&id=wFlitpRAdn3I&format=png&color=000000"
+          }
+          alt=""
+        />
+        <h1 className="text-2xl font-semibold">Your cart is empty!</h1>
+        <p className="font-semibold">Add some amazing tools to get started.</p>
+      </div>
+    </div>
+  );
 };
 
 export default Cart;

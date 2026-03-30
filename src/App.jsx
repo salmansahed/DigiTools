@@ -8,6 +8,7 @@ import Pricing from "./components/Pricing";
 import CTA from "./components/CTA";
 import Footer from "./components/Footer";
 import Products from "./components/Products";
+import { useState } from "react";
 
 const pricingData = async () => {
   const res = await fetch("PricingData.json");
@@ -22,13 +23,16 @@ const productsData = async () => {
 const productsPromise = productsData();
 
 function App() {
+
+  const [cartItem, setCartItem] = useState([]);
+
   return (
     <>
       <ToastContainer />
       <NavBar />
       <Banner />
       <Achievements />
-      <Products productsPromise={productsPromise} />
+      <Products productsPromise={productsPromise} setCartItem={setCartItem} cartItem={cartItem}/>
       <HowItWorks />
       <Pricing pricingPromise={pricingPromise} />
       <CTA />
