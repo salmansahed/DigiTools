@@ -6,6 +6,7 @@ import Achievements from './components/Achievements'
 import HowItWorks from './components/HowItWorks'
 import Pricing from './components/Pricing'
 import CTA from './components/CTA'
+import Footer from './components/Footer'
 
 const pricingData = async() => {
   const res = await fetch("PricingData.json");
@@ -24,6 +25,7 @@ function App() {
       <HowItWorks />
       <Pricing pricingPromise={pricingPromise} />
       <CTA/>
+      <Footer/>
     </>
   );
 }
