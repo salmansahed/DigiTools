@@ -1,7 +1,7 @@
 import React from "react";
-const NavBar = () => {
+const NavBar = ({ cartItem }) => {
   return (
-    <div className="bg-base-100 shadow-sm ">
+    <div className="bg-base-100 shadow-sm sticky top-0 z-99">
       <div className="navbar container mx-auto">
         <div className="navbar-start">
           <div className="dropdown">
@@ -68,7 +68,12 @@ const NavBar = () => {
         </div>
         <div className="navbar-end">
           <div className="flex items-center gap-4">
-            <i className="fa-solid fa-cart-shopping cursor-pointer hover:text-red-400 transition-all"></i>
+            <div className="relative">
+              <i className="fa-solid fa-cart-shopping cursor-pointer hover:text-red-400 transition-all"></i>
+              <p className={`bg-red-500 text-white rounded-full w-5 h-5 ${cartItem.length === 0 ? "hidden" : "flex items-center justify-center"} absolute -top-3 -right-2`}>
+                {cartItem.length}
+              </p>
+            </div>
             <button className="font-semibold cursor-pointer hover:text-green-500 transition-all">
               Login
             </button>

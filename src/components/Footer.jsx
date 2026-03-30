@@ -14,31 +14,31 @@ const Footer = () => {
 
           <div>
             <h2 className="text-xl font-medium">Product</h2>
-            <ul className="text-[#aeb2b6] space-y-4 mt-5">
-              <li>Features</li>
-              <li>Pricing</li>
-              <li>Templates</li>
-              <li>Integrations</li>
+            <ul className="space-y-4 mt-5">
+              <li className='text-[#aeb2b6] hover:text-white transition-all'><a href="#">Features</a></li>
+              <li className='text-[#aeb2b6] hover:text-white transition-all'><a href="#">Pricing</a></li>
+              <li className='text-[#aeb2b6] hover:text-white transition-all'><a href="#">Templates</a></li>
+              <li className='text-[#aeb2b6] hover:text-white transition-all'><a href="#">Integrations</a></li>
             </ul>
           </div>
 
           <div>
             <h2 className="text-xl font-medium">Company</h2>
-            <ul className="text-[#aeb2b6] space-y-4 mt-5">
-              <li>About</li>
-              <li>Blog</li>
-              <li>Careers</li>
-              <li>Press</li>
+            <ul className="space-y-4 mt-5">
+              <li className='text-[#aeb2b6] hover:text-white transition-all'><a href="#">About</a></li>
+              <li className='text-[#aeb2b6] hover:text-white transition-all'><a href="#">Blog</a></li>
+              <li className='text-[#aeb2b6] hover:text-white transition-all'><a href="#">Careers</a></li>
+              <li className='text-[#aeb2b6] hover:text-white transition-all'><a href="#">Press</a></li>
             </ul>
           </div>
 
           <div>
             <h2 className="text-xl font-medium">Resources</h2>
-            <ul className="text-[#aeb2b6] space-y-4 mt-5">
-              <li>Documentation</li>
-              <li>Help Center</li>
-              <li>Community</li>
-              <li>Contact</li>
+            <ul className="space-y-4 mt-5">
+              <li className='text-[#aeb2b6] hover:text-white transition-all'><a href="#">Documentation</a></li>
+              <li className='text-[#aeb2b6] hover:text-white transition-all'><a href="#">Help Center</a></li>
+              <li className='text-[#aeb2b6] hover:text-white transition-all'><a href="#">Community</a></li>
+              <li className='text-[#aeb2b6] hover:text-white transition-all'><a href="#">Contact</a></li>
             </ul>
           </div>
 

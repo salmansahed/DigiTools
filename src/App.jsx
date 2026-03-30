@@ -29,7 +29,7 @@ function App() {
   return (
     <>
       <ToastContainer />
-      <NavBar />
+      <NavBar cartItem={cartItem}/>
       <Banner />
       <Achievements />
       <Products productsPromise={productsPromise} setCartItem={setCartItem} cartItem={cartItem}/>
