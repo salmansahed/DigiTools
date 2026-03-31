@@ -27,7 +27,8 @@ const SinglePricingCard = ({ pricingCard }) => {
       </h1>
       <div className="mb-6">
         {pricingCard.features.map((feature, index) => (
-          <li key={index}
+          <li
+            key={index}
             className={`list-none mb-2 ${pricingCard.isPopular ? "text-white" : "text-black"}`}
           >
             <i
@@ -38,7 +39,7 @@ const SinglePricingCard = ({ pricingCard }) => {
         ))}
       </div>
       <button
-        className={`btn rounded-full mt-auto ${pricingCard.isPopular ? "bg-white text-[#792cf8]" : "bg-linear-to-r from-[#4F39F6] to-[#9514FA] text-white"}  w-full border-none`}
+        className={`btn rounded-full mt-auto ${pricingCard.isPopular ? "bg-white text-[#792cf8]" : "bg-linear-to-r from-[#4F39F6] to-[#9514FA] text-white hover:bg-linear-to-l hover:from-[#4F39F6] hover:to-[#9514FA] transition-all ease-in-out"}  w-full border-none`}
       >
         {pricingCard.buttonText}
       </button>

@@ -16,7 +16,7 @@ const CTA = () => {
               Explore Products
             </span>
           </button>
-          <button className="btn rounded-full bg-transparent border border-white text-white">
+          <button className="btn rounded-full bg-transparent border border-white text-white hover:bg-white hover:text-purple-600">
             View Pricing
           </button>
         </div>

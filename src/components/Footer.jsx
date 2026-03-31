@@ -15,30 +15,54 @@ const Footer = () => {
           <div>
             <h2 className="text-xl font-medium">Product</h2>
             <ul className="space-y-4 mt-5">
-              <li className='text-[#aeb2b6] hover:text-white transition-all'><a href="#">Features</a></li>
-              <li className='text-[#aeb2b6] hover:text-white transition-all'><a href="#">Pricing</a></li>
-              <li className='text-[#aeb2b6] hover:text-white transition-all'><a href="#">Templates</a></li>
-              <li className='text-[#aeb2b6] hover:text-white transition-all'><a href="#">Integrations</a></li>
+              <li className="text-[#aeb2b6] hover:text-white transition-all">
+                <a href="#">Features</a>
+              </li>
+              <li className="text-[#aeb2b6] hover:text-white transition-all">
+                <a href="#">Pricing</a>
+              </li>
+              <li className="text-[#aeb2b6] hover:text-white transition-all">
+                <a href="#">Templates</a>
+              </li>
+              <li className="text-[#aeb2b6] hover:text-white transition-all">
+                <a href="#">Integrations</a>
+              </li>
             </ul>
           </div>
 
           <div>
             <h2 className="text-xl font-medium">Company</h2>
             <ul className="space-y-4 mt-5">
-              <li className='text-[#aeb2b6] hover:text-white transition-all'><a href="#">About</a></li>
-              <li className='text-[#aeb2b6] hover:text-white transition-all'><a href="#">Blog</a></li>
-              <li className='text-[#aeb2b6] hover:text-white transition-all'><a href="#">Careers</a></li>
-              <li className='text-[#aeb2b6] hover:text-white transition-all'><a href="#">Press</a></li>
+              <li className="text-[#aeb2b6] hover:text-white transition-all">
+                <a href="#">About</a>
+              </li>
+              <li className="text-[#aeb2b6] hover:text-white transition-all">
+                <a href="#">Blog</a>
+              </li>
+              <li className="text-[#aeb2b6] hover:text-white transition-all">
+                <a href="#">Careers</a>
+              </li>
+              <li className="text-[#aeb2b6] hover:text-white transition-all">
+                <a href="#">Press</a>
+              </li>
             </ul>
           </div>
 
           <div>
             <h2 className="text-xl font-medium">Resources</h2>
             <ul className="space-y-4 mt-5">
-              <li className='text-[#aeb2b6] hover:text-white transition-all'><a href="#">Documentation</a></li>
-              <li className='text-[#aeb2b6] hover:text-white transition-all'><a href="#">Help Center</a></li>
-              <li className='text-[#aeb2b6] hover:text-white transition-all'><a href="#">Community</a></li>
-              <li className='text-[#aeb2b6] hover:text-white transition-all'><a href="#">Contact</a></li>
+              <li className="text-[#aeb2b6] hover:text-white transition-all">
+                <a href="#">Documentation</a>
+              </li>
+              <li className="text-[#aeb2b6] hover:text-white transition-all">
+                <a href="#">Help Center</a>
+              </li>
+              <li className="text-[#aeb2b6] hover:text-white transition-all">
+                <a href="#">Community</a>
+              </li>
+              <li className="text-[#aeb2b6] hover:text-white transition-all">
+                <a href="#">Contact</a>
+              </li>
             </ul>
           </div>
 
@@ -46,18 +70,18 @@ const Footer = () => {
             <h2 className="text-xl font-medium">Social Links</h2>
             <ul className="flex gap-4 mt-5 items-center justify-center md:justify-start">
               <li className="bg-white hover:bg-blue-500 text-black hover:text-white transition-all rounded-full w-10 h-10 flex items-center justify-center">
-                <a href="#">
+                <a href="https://www.instagram.com/sahriyar294/">
                   <i className="fa-brands fa-instagram"></i>
                 </a>
               </li>
               <li className="bg-white hover:bg-blue-500 text-black hover:text-white transition-all rounded-full w-10 h-10 flex items-center justify-center">
-                <a href="#">
+                <a href="https://www.facebook.com/salmansahedbd">
                   <i className="fa-brands fa-facebook"></i>
                 </a>
               </li>
               <li className="bg-white hover:bg-blue-500 text-black hover:text-white transition-all rounded-full w-10 h-10 flex items-center justify-center">
-                <a href="#">
-                  <i className="fa-brands fa-x-twitter"></i>
+                <a href="https://www.linkedin.com/in/salman-sahed/">
+                  <i className="fa-brands fa-linkedin"></i>
                 </a>
               </li>
             </ul>
@@ -68,9 +92,15 @@ const Footer = () => {
             © 2026 Digitools. All rights reserved.
           </p>
           <ul className="text-[#fafafa49] flex gap-6 items-center justify-center md:justify-start">
-            <li><a href="#">Privacy Policy</a></li>
-            <li><a href="#">Terms of Service</a></li>
-            <li><a href="#">Cookies</a></li>
+            <li>
+              <a href="#">Privacy Policy</a>
+            </li>
+            <li>
+              <a href="#">Terms of Service</a>
+            </li>
+            <li>
+              <a href="#">Cookies</a>
+            </li>
           </ul>
         </div>
       </div>

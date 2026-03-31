@@ -3,7 +3,6 @@ import Product from "./Product";
 import Cart from "./Cart";
 
 const Products = ({ productsPromise, cartItem, setCartItem }) => {
-  console.log(cartItem);
   const products = use(productsPromise);
   const [btnToggle, setBtnToggle] = useState("Products");
   const handleProductsBtn = () => {
@@ -29,13 +28,13 @@ const Products = ({ productsPromise, cartItem, setCartItem }) => {
         <div className="text-center border inline-block rounded-full p-0.5 border-black/20">
           <button
             onClick={handleProductsBtn}
-            className={`btn rounded-full ${btnToggle === "Products" ? "bg-linear-to-r from-[#4F39F6] to-[#9514FA] text-white" : "bg-transparent"} border-none`}
+            className={`btn rounded-full ${btnToggle === "Products" ? "bg-linear-to-r from-[#4F39F6] to-[#9514FA] hover:bg-linear-to-l hover:from-[#4F39F6] hover:to-[#9514FA] transition-all ease-in-out text-white" : "bg-transparent"} border-none`}
           >
             Products
           </button>
           <button
             onClick={handleCartBtn}
-            className={`btn rounded-full ${btnToggle === "Cart" ? "bg-linear-to-r from-[#4F39F6] to-[#9514FA] text-white" : "bg-transparent"} border-none`}
+            className={`btn rounded-full ${btnToggle === "Cart" ? "bg-linear-to-r from-[#4F39F6] to-[#9514FA] hover:bg-linear-to-l hover:from-[#4F39F6] hover:to-[#9514FA] transition-all ease-in-out text-white" : "bg-transparent"} border-none`}
           >
             Cart ({cartItem.length})
           </button>
@@ -53,7 +52,11 @@ const Products = ({ productsPromise, cartItem, setCartItem }) => {
             />
           ))}
       </div>
-      <div>{btnToggle === "Cart" && <Cart setCartItem={setCartItem} cartItem={cartItem} />}</div>
+      <div>
+        {btnToggle === "Cart" && (
+          <Cart setCartItem={setCartItem} cartItem={cartItem} />
+        )}
+      </div>
     </div>
   );
 };

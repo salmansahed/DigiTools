@@ -16,7 +16,7 @@ const HowItWorks = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-10 mt-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6 xl:gap-10 mt-10">
           <div className="bg-white shadow rounded-lg py-16 md:py-20 text-center space-y-3 md:space-y-4 px-4 relative">
             <img className="mx-auto w-20" src={user} alt="User" />
             <h3 className="text-xl md:text-2xl font-bold">Create Account</h3>

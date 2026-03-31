@@ -7,32 +7,45 @@ const Cart = ({ cartItem, setCartItem }) => {
     0,
   );
 
-  const handleRemoveBtn = (id) => {
-    const remainingItems = cartItem.filter((item) => item.id !== id);
+  const handleRemoveBtn = (product) => {
+    const remainingItems = cartItem.filter((item) => item.id !== product.id);
     setCartItem(remainingItems);
-    toast.warn("Item removed from cart");
+    toast.warn(
+      <span>
+        <b className="bg-linear-to-r from-[#4F39F6] to-[#9514FA] text-transparent bg-clip-text">
+          {product.title}
+        </b>{" "}
+        removed from cart 🗑️
+      </span>,
+    );
   };
 
   const handleCheckoutBtn = () => {
     setCartItem([]);
-    toast("All Products Checkout");
+    toast("Checkout completed 🎉");
   };
   return (
     <div className="bg-white shadow p-6 rounded-lg border-2 border-black/10">
       <h2 className="text-2xl font-bold mb-6">Your Cart</h2>
       {cartItem.map((product) => (
-        <div className="flex items-center justify-between bg-[#f9fafc] shadow rounded-lg p-6 mb-6">
+        <div key={product.id} className="flex items-center justify-between bg-[#f9fafc] shadow rounded-lg p-6 mb-6">
           <div className="flex items-center gap-6 w-full">
-            <img className="w-[18%] sm:w-[10%] md:w-[5%]" src={product.icon} alt="" />
+            <img
+              className="w-[18%] sm:w-[10%] md:w-[5%]"
+              src={product.icon}
+              alt=""
+            />
             <div>
-              <h3 className="text-[18px] md:text-xl font-bold">{product.title}</h3>
+              <h3 className="text-[18px] md:text-xl font-bold">
+                {product.title}
+              </h3>
               <p className="text-[#627382] font-medium">${product.price}</p>
             </div>
           </div>
 
           <div>
             <p
-              onClick={() => handleRemoveBtn(product.id)}
+              onClick={() => handleRemoveBtn(product)}
               className="text-[#FF3980] cursor-pointer hover:text-purple-500 transition-all"
             >
               Remove
@@ -44,11 +57,11 @@ const Cart = ({ cartItem, setCartItem }) => {
         className={`flex justify-between ${totalPrice === 0 ? "hidden" : "block"}`}
       >
         <p>Total:</p>
-        <h3 className="text-xl font-semibold">${totalPrice}</h3>
+        <h3 className="text-2xl font-bold">${totalPrice}</h3>
       </div>
       <button
         onClick={handleCheckoutBtn}
-        className={`btn rounded-full w-full bg-linear-to-r from-[#4F39F6] to-[#9514FA] text-white border-none ${totalPrice === 0 ? "hidden" : "block"} mt-6`}
+        className={`btn rounded-full w-full bg-linear-to-r from-[#4F39F6] to-[#9514FA] hover:bg-linear-to-l hover:from-[#4F39F6] hover:to-[#9514FA] transition-all ease-in-out text-white border-none ${totalPrice === 0 ? "hidden" : "block"} mt-6`}
       >
         Proceed to Checkout
       </button>

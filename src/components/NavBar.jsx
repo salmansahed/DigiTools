@@ -41,9 +41,17 @@ const NavBar = ({ cartItem }) => {
               <li>
                 <a href="#">FAQ</a>
               </li>
+              <li className="block sm:hidden">
+                <a
+                  href="#"
+                  className="bg-linear-to-r from-[#4F39F6] to-[#9514FA] inline-block text-white"
+                >
+                  Login
+                </a>
+              </li>
             </ul>
           </div>
-          <a className="text-2xl md:text-4xl py-1 font-bold bg-linear-to-r from-[#4F39F6] to-[#9514FA] text-transparent bg-clip-text">
+          <a href="#" className="text-[22px] md:text-4xl py-1 font-bold bg-linear-to-r from-[#4F39F6] to-[#9514FA] text-transparent bg-clip-text">
             DigiTools
           </a>
         </div>
@@ -70,14 +78,16 @@ const NavBar = ({ cartItem }) => {
           <div className="flex items-center gap-4">
             <div className="relative">
               <i className="fa-solid fa-cart-shopping cursor-pointer hover:text-red-400 transition-all"></i>
-              <p className={`bg-red-500 text-white rounded-full w-5 h-5 ${cartItem.length === 0 ? "hidden" : "flex items-center justify-center"} absolute -top-3 -right-2`}>
+              <p
+                className={`bg-red-500 text-white rounded-full w-5 h-5 ${cartItem.length === 0 ? "hidden" : "flex items-center justify-center"} absolute -top-3 -right-2`}
+              >
                 {cartItem.length}
               </p>
             </div>
-            <button className="font-semibold cursor-pointer hover:text-green-500 transition-all">
+            <button className="font-semibold cursor-pointer hover:text-green-500 transition-all hidden sm:block">
               Login
             </button>
-            <a className="btn rounded-full font-semibold bg-linear-to-r from-[#4F39F6] to-[#9514FA] text-white hover:bg-linear-to-l hover:from-[#4F39F6] hover:to-[#9514FA] transition-all delay-1000 ease-in-out border-none">
+            <a className="btn btn-sm sm:btn sm:btn-md rounded-full font-semibold bg-linear-to-r from-[#4F39F6] to-[#9514FA] text-white hover:bg-linear-to-l hover:from-[#4F39F6] hover:to-[#9514FA] transition-all ease-in-out border-none">
               Get Started
             </a>
           </div>
