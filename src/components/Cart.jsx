@@ -46,7 +46,7 @@ const Cart = ({ cartItem, setCartItem }) => {
           <div>
             <p
               onClick={() => handleRemoveBtn(product)}
-              className="text-[#FF3980] cursor-pointer hover:text-purple-500 transition-all text-sm sm:text-base"
+              className="text-[#FF3980] cursor-pointer hover:text-purple-500 transition-all text-sm sm:text-base font-semibold"
             >
               Remove
             </p>

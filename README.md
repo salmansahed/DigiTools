@@ -84,9 +84,9 @@ The project implements **JavaScript ES6+** best practices like **Ternary Operato
 
 - **LinkedIn:** [Salman Sahed](https://www.linkedin.com/in/salman-sahed/)
 
-- **Facebook:** [Salman Sahed BD](https://www.facebook.com/salmansahedbd)
+- **Facebook:** [Salman Sahed](https://www.facebook.com/salmansahedbd)
 
-- **GitHub:** [@salmansahedbd](https://github.com/salmansahed)
+- **GitHub:** [@salmansahed](https://github.com/salmansahed)
 
 ---
 
